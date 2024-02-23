@@ -1,7 +1,9 @@
 import { apiDefaults, axios } from "@/api/index.js";
-
+if (process.client){
+  var Cart = JSON.parse(localStorage.getItem("cart"))
+}
 const state = {
-  cart: JSON.parse(localStorage.getItem("cart")) || [],
+  cart: Cart  || [],
   reference: {},
   deliveryCharges: 0,
   updatedDelivery: 0,

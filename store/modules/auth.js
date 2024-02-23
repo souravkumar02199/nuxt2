@@ -1,13 +1,17 @@
 import { unauthClient, apiDefaults, axios } from "@/api/index.js";
-
+ if(process.client){
+  var Access=sessionStorage.getItem("access") 
+   var  Refresh= sessionStorage.getItem("refresh") 
+   var  Email= sessionStorage.getItem("email") 
+ }
 const Auth = {
   state: () => ({
     userDetails: (state) => {
       return state.user;
     },
-    access: sessionStorage.getItem("access") || null,
-    refresh: sessionStorage.getItem("refresh") || null,
-    email: sessionStorage.getItem("email") || null,
+    access: Access || null,
+    refresh: Refresh || null,
+    email: Email || null,
     unauthClient: unauthClient,
     endpoints: {
       obtain: "/front-user/login",
@@ -30,10 +34,13 @@ const Auth = {
       }
     },
     updateAccess(state, access) {
+      if (process.client) {
       sessionStorage.setItem("access", access);
       state.access = access;
+      }
     },
     removeToken(state) {
+      if (process.client) {
       sessionStorage.removeItem("access", null);
       sessionStorage.removeItem("refresh", null);
       sessionStorage.removeItem("name", null);
@@ -42,6 +49,7 @@ const Auth = {
       state.access = null;
       state.user = {};
       sessionStorage.removeItem("userlogin", false);
+      }
     },
   },
   getters: {
