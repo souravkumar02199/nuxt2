@@ -3,14 +3,13 @@ frontend:
   phases:
     preBuild:
       commands:
-        - npm ci
+        - nvm use 18
+        - corepack enable
+        - npx --yes nypm i
     build:
       commands:
         - npm run build
   artifacts:
-    baseDirectory: dist
+    baseDirectory: .amplify-hosting
     files:
       - '**/*'
-  cache:
-    paths:
-      - node_modules/**/*
