@@ -1,0 +1,38 @@
+User-Agent: *
+Disallow: /dashboard.digitalpress.co.uk/
+Disallow: /dashboard-dev.digitalpress.co.uk/
+Disallow: /studio.digitalpress.co.uk/
+Disallow: /supplier.digitalpress.co.uk/
+Disallow: /frontend-dev.digitalpress.co.uk/
+Disallow: /flow.digitalpress.co.uk/
+Disallow: /signin
+Disallow: /signup
+Disallow: /forgot_password
+Disallow: /reset-password/
+Disallow: /proofing/
+Disallow: /cart
+Disallow: /cart/
+Disallow: /cart/order-details
+Disallow: /cart/upload-artwork
+Disallow: /cart/cart-delivery
+Disallow: /dashboard
+Disallow: /dashboard/
+Disallow: /order-invoice
+Disallow: /order-invoice/
+Disallow: /enviromental_policy
+Disallow: /modern-slavery-act-policy-statement
+Disallow: /equal_gender_policy
+Disallow: /terms-and-condition
+Disallow: /return-policy
+Disallow: /white-label-packaging
+Disallow: /design-and-proofing
+Disallow: /privacy-policy
+Disallow: /request_quote
+Disallow: /return-policy/
+Disallow: /quotation/
+
+Disallow: /404
+
+
+
+Sitemap: https://www.digitalpress.co.uk/sitemap.xml
